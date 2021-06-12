@@ -1,4 +1,4 @@
-#Welcome the Random Workout Generator!
+# Welcome the Random Workout Generator!
 
 Goal of this project is to make a small app where people can randomly generate their workouts using certain paramaters.
 
