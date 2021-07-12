@@ -1,5 +1,5 @@
 # Welcome the Random Workout Generator!
-<img href="https://generationiron.com/wp-content/uploads/2017/07/arnold-schwarzenegger-banner.jpg" heigth=480px width=480px />
+<img src="https://generationiron.com/wp-content/uploads/2017/07/arnold-schwarzenegger-banner.jpg" heigth=480px width=480px />
 Goal of this project is to make a small app where people can randomly generate their workouts using certain paramaters.
 
 1. As a user I want to be able to randomly generate exercises.
