@@ -5,7 +5,8 @@ const Exercise = (props) => {
     <div>
       <h1>{props.muscle}</h1>
       <h2>{props.name}</h2>
-      <p>{props.description}</p>
+      <img alt={props.alt} src={props.img} />
+      <span>{props.description}</span>
     </div>
   );
 };
