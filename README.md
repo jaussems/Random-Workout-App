@@ -1,8 +1,9 @@
 # Welcome the Random Workout Generator!
-
+<img src="https://generationiron.com/wp-content/uploads/2017/07/arnold-schwarzenegger-banner.jpg" heigth=480px width=480px align="center"  />
 Goal of this project is to make a small app where people can randomly generate their workouts using certain paramaters.
 
-1. As a user I want to be able to randomly generate exersizes.
-2. As a user I want to be able to save these exersizes 
-3. As a user I want to be able to share these exersizes I just did.
-4. As a user I want to be able to comment and like certain workouts (going to expand on this)
+1. As a user I want to be able to randomly generate exercises.
+2. As a user I want to select musclegroups in which to randomly generate exercises.
+3. As a user I want to be able to save these exercises 
+4. As a user I want to be able to share these exercises I just did.
+
