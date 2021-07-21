@@ -1,12 +1,18 @@
-import { generateExercise } from "../store/exercise/action";
+import { generateExercise, clearStateImages } from "../store/exercise/action";
 import { useDispatch } from "react-redux";
 
 const ButtonComponent = (props) => {
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
+
+  // <button
+  //       onClick={() => {
+  //         dispatch(generateExercise());
+  //       }}
+  //     ></button>
 
   return (
     <>
-      <button onClick={() => dispatch(generateExercise())}>{props.text}</button>
+      <button onClick={props.clicked}>{props.text}</button>
     </>
   );
 };

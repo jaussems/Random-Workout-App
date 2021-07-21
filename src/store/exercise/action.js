@@ -3,6 +3,7 @@ import axios from "axios";
 export const FETCH_EXERCISE = "FETCH_EXERCISE";
 export const FETCH_EXERCISE_IMAGE = "FETCH_EXERCISE_IMAGE";
 export const FETCH_MUSCLE_GROUPS = "FETCH_MUSCLE_GROUPS";
+export const CLEAR_STATE_IMAGE = "CLEAR_STATE_IMAGE";
 //const auth = "Authorization: Token 1698cdafb2a835670bbd6074c4d89c38576631f1";
 
 //let random = Math.floor(Math.random() * 10);
@@ -18,6 +19,13 @@ export const getImages = (images) => {
   return {
     type: FETCH_EXERCISE_IMAGE,
     payload: { images },
+  };
+};
+
+export const clearStateImages = () => {
+  return {
+    type: CLEAR_STATE_IMAGE,
+    payload: null,
   };
 };
 
@@ -63,7 +71,10 @@ export const generateImage = (id) => {
           },
         }
       );
-
+      // console.log(
+      //   "DATA I RECEIVED FROM GENERATE IMAGE ACTION:",
+      //   image_response.data
+      // );
       dispatch(getImages(image_response.data));
     } catch (e) {
       console.log("ERROR MESSAGE", e.message);
