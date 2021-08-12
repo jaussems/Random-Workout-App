@@ -3,15 +3,11 @@
   background: linear-gradient(155deg, #ffffff, #7442d3, #e75de0);
   z-index: 0;
   background-size: cover;
+  background-position: center center;
   margin: 0;
   width: 100%;
   height: 100%;
   padding: 0;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -20,20 +16,15 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
+}
+
+.muscle-list {
+  display: flex;
+  margin-top: 15%;
+  flex-direction: row;
+  list-style-type: none;
 }
 
 .exerciseCart {

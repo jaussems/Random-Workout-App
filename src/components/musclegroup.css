@@ -1,65 +1,102 @@
-.musclegroupcontainer {
-  margin: 0 auto;
-  width: 30%;
+.muscle-selector {
+  display: flex;
+  gap: 4em;
+  padding: 0.35em;
+  flex-direction: row;
+  justify-self: center;
+  position: relative;
+  margin-top: 0.000005em;
+  text-align: left;
+  text-overflow: ellipsis;
+}
 
-  height: 100%;
+.musclegroup-list {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  overflow: visible;
+  position: relative;
+  width: fit-content;
+  min-width: 400px;
+  margin-top: 2em;
+  background-position: top;
+  background-repeat: no-repeat;
+  z-index: 0;
+  background-size: contain;
+}
+
+.muscletext {
+  font-size: 40px;
+}
+
+.muscle-selector button {
+  display: block;
+  margin-left: auto;
+  float: right;
+  border: 0 solid transparent;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 3em;
 }
 .muscleImgitem {
   position: absolute;
+  overflow: visible;
   z-index: 1;
-  top: -5em;
-  left: -1em;
-  right: 0;
-  margin: 12em auto;
-  width: 30%;
-  height: 100%;
-  background: none;
+  justify-content: safe center;
   background: transparent;
   background-image: none;
+  display: hidden;
 }
-.muscleImgitem img {
-  margin: 0 auto;
-  padding: 5px;
+
+.muscle-showcase img {
   position: absolute;
-  background: none;
-  background-image: none;
+  display: flex;
+  justify-content: safe center;
+  max-height: 100%;
+  max-width: 100%;
+  opacity: 55%;
+  filter: grayscale(100%);
+  width: 390px;
+  height: 600px;
+  object-fit: contain;
+
+  z-index: 999;
 }
+
+.muscle-showcase-active img {
+  position: absolute;
+  display: flex;
+  justify-content: safe center;
+  max-height: 100%;
+  max-width: 100%;
+  opacity: 55%;
+
+  width: 390px;
+  height: 600px;
+  object-fit: contain;
+
+  z-index: 999;
+}
+
+.muscleImgContainer {
+  display: block;
+  position: absolute;
+
+  z-index: 2;
+}
+
+/* .muscleImgContainer img {
+  position: fixed;
+} */
+
+.muscle-selector:nth-child(4) {
+  margin: 0 auto;
+  margin-left: 3em;
+  padding: 5px;
+  background-color: cadetblue;
+}
+
 .muscletext {
   display: block;
-}
-
-.muscleImgitem:hover {
-  opacity: 0.7 !important;
-  background-color: gold;
-  filter: sepia(100%);
-  box-shadow: 2 0 0px #bee901de !important;
-}
-
-.muscle-selector {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin-top: 0.000005em;
-  margin-left: -15em;
-  padding: 0;
-  text-align: center;
-}
-
-.muscle-selector ul {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-
-  margin-left: -10em;
-}
-
-.muscle-selector li {
-  justify-content: space-around;
-  padding: 0.25em;
-}
-
-.muscle-selector li button {
-  float: inline-end;
-  flex-wrap: wrap-reverse;
-  border: 0 solid transparent;
 }

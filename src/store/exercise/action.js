@@ -4,6 +4,8 @@ export const FETCH_EXERCISE = "FETCH_EXERCISE";
 export const FETCH_EXERCISE_IMAGE = "FETCH_EXERCISE_IMAGE";
 export const FETCH_MUSCLE_GROUPS = "FETCH_MUSCLE_GROUPS";
 export const CLEAR_STATE_IMAGE = "CLEAR_STATE_IMAGE";
+export const ADD_MUSCLE_QUERY = "ADD_MUSCLE_QUERY";
+export const DELETE_MUSCLE_QUERY = "DELETE_MUSCLE_QUERY";
 //const auth = "Authorization: Token 1698cdafb2a835670bbd6074c4d89c38576631f1";
 
 //let random = Math.floor(Math.random() * 10);
@@ -36,14 +38,27 @@ export const getMusclegroup = (fetchedGroups) => {
   };
 };
 
+export const addMuscleQuery = (muscle) => {
+  return {
+    type: ADD_MUSCLE_QUERY,
+    payload: muscle,
+  };
+};
+
+export const removeMuscleQuery = (muscle) => {
+  return {
+    type: DELETE_MUSCLE_QUERY,
+    payload: muscle,
+  };
+};
 // HTTPIE Working GET: https://wger.de/api/v2/exercise/ language=2/ "Authorization: Token 1698cdafb2a835670bbd6074c4d89c38576631f1"
 //`https://wger.de/api/v2/exercise/?language=2 Authorization: Token 1698cdafb2a835670bbd6074c4d89c38576631f1
-
-export const generateExercise = () => {
+//https://wger.de/api/v2/exercise/?format=api&language=2&limit=20&muscles=2,4&offset=20 muscle query
+export const generateExercise = (muscles) => {
   return async (dispatch, getState) => {
     try {
       const response = await axios.get(
-        `https://wger.de/api/v2/exercise/?language=2&limit=20&offset=${Math.floor(
+        `https://wger.de/api/v2/exercise/?language=2&limit=20&muscles=${muscles}&offset=${Math.floor(
           Math.random() * 10
         )}`,
         {
@@ -52,7 +67,6 @@ export const generateExercise = () => {
           },
         }
       );
-
       dispatch(getExercise(response.data.results));
     } catch (e) {
       console.log("ERROR MESSAGE", e.message);
@@ -75,6 +89,8 @@ export const generateImage = (id) => {
       //   "DATA I RECEIVED FROM GENERATE IMAGE ACTION:",
       //   image_response.data
       // );
+      console.log("testing response:", image_response);
+
       dispatch(getImages(image_response.data));
     } catch (e) {
       console.log("ERROR MESSAGE", e.message);
